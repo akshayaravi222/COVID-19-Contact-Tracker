@@ -16,7 +16,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('COVID Contact Tracer'),
+        title: Text('COVID-19 Contact Tracker'),
       ),
       //body: _children[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
