@@ -20,7 +20,7 @@ class _HomeState extends State<Numbers> {
       subtitle: Text(
         'Total Cases: 12,898,827                                '
         'Total Deaths: 568,815                                 '
-        'Total cases: 7,517,940',
+        'Total Recovered: 7,517,940',
         style: TextStyle(fontSize: 20),
       ),
     );
