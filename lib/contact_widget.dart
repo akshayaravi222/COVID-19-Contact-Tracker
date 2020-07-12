@@ -11,12 +11,6 @@ class Contact extends StatefulWidget {
 }
 class _HomeState extends State<Contact> {
     bool infectionRisk = false;
-//  final List<Widget> _children = [
-//    Contact(),
-//    Home(),
-//    Contact(),
-//  ];
-//  String dropdownValue = 'Massachusetts';
 
   @override
   Widget build(BuildContext context) {
@@ -38,6 +32,6 @@ class _HomeState extends State<Contact> {
     });
     return true;
   }
-  }
+}
 
 

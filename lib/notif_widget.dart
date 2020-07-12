@@ -12,13 +12,6 @@ class Notif extends StatefulWidget {
 }
 class _HomeState extends State<Notif> {
   int _currentIndex = 1;
-  final List<Widget> _children = [
-    //PlaceholderWidget(Colors.yellow),
-    Notif(),
-    //PlaceholderWidget(Colors.black),
-    Numbers(),
-    Contact()
-  ];
 
   @override
   Widget build(BuildContext context) {

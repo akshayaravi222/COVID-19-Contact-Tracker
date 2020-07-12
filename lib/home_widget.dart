@@ -14,9 +14,7 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   int _currentIndex = 1;
   final List<Widget> _children = [
-    //PlaceholderWidget(Colors.yellow),
     Notif(),
-    //PlaceholderWidget(Colors.black),
     Numbers(),
     Contact()
   ];
