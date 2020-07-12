@@ -11,15 +11,15 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   int _currentIndex = 1;
   final List<Widget> _children = [
-    PlaceholderWidget(Colors.red),
     PlaceholderWidget(Colors.white),
-    PlaceholderWidget(Colors.lightBlue)
+    PlaceholderWidget(Colors.white),
+    PlaceholderWidget(Colors.white)
   ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('COVID Contact Tracer'),
+        title: Text('COVID-19 Contact Tracer'),
       ),
       body: _children[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
