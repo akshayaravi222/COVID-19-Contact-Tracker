@@ -18,28 +18,11 @@ class _HomeState extends State<Numbers> {
     return ListTile(
       title: Text('COVID Numbers Globally', style: TextStyle(fontSize: 35)),
       subtitle: Text(
-<<<<<<< HEAD
         'TotalCases: 12,898,827                                '
         'Total Deaths: 568,815                                 '
         'Total cases: 7,517,940',
         style: TextStyle(fontSize: 20),
       ),
     );
-  }
-
-  bool onTabTapped() {
-    setState(() {
-      infectionRisk = !infectionRisk;
-    });
-    return true;
-=======
-          'Total Cases: 12,898,827                                '
-          'Total Deaths: 568,815                                 '
-          'Total Cases: 7,517,940',
-
-            style: TextStyle(fontSize: 20),
-      ),
-    );
->>>>>>> 29971144e51e440bea062795a075be6f395a50b4
   }
 }
