@@ -16,7 +16,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('COVID-19 Contact Tracker'),
+        title: Text('COVID Contact Tracer'),
       ),
       //body: _children[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
@@ -32,11 +32,10 @@ class _HomeState extends State<Home> {
             title: new Text('Home'),
           ),
           BottomNavigationBarItem(
-              icon: Icon(Icons.person),
-              title: Text('Contacts')
-          )
+              icon: Icon(Icons.person), title: Text('Contacts'))
         ],
       ),
+      // Body content
       body: Center(
         child: Column(children: <Widget>[
           Text(
@@ -46,7 +45,6 @@ class _HomeState extends State<Home> {
           Text(
             'Total Cases: 12,839,626',
             style: TextStyle(fontSize: 25),
-
           ),
           Text(
             'Total Recovered Cases: 7,477,717',
@@ -62,8 +60,6 @@ class _HomeState extends State<Home> {
               height: 1.5,
             ),
           ),
-
-
           Text(
             'COVID-19 in the US',
             style: TextStyle(
@@ -73,7 +69,6 @@ class _HomeState extends State<Home> {
           Text(
             'Total Cases: 3,355,646',
             style: TextStyle(fontSize: 25),
-
           ),
           Text(
             'Recovered Cases: 1,490,446',
@@ -89,8 +84,6 @@ class _HomeState extends State<Home> {
               height: 1.5,
             ),
           ),
-
-
           Text(
             'Select a state to get more information',
             style: TextStyle(
@@ -122,23 +115,43 @@ class _HomeState extends State<Home> {
               'New York',
               'Texas',
               'Florida'
-            ]
-                .map<DropdownMenuItem<String>>((String value) {
+            ].map<DropdownMenuItem<String>>((String value) {
               return DropdownMenuItem<String>(
-
                 value: value,
                 child: Text(value),
               );
-            })
-                .toList(),
-
+            }).toList(),
           ),
+          RaisedButton(
+            onPressed: () async {
+              Future<http.Response> fetchData() {
+                return http.get(
+                    'https://hack3.litecomet.com/insert.php?location="ABRHS"&user=1');
+              }
 
+              await fetchData();
+            },
+            textColor: Colors.white,
+            padding: const EdgeInsets.all(0.0),
+            child: Container(
+              decoration: const BoxDecoration(
+                gradient: LinearGradient(
+                  colors: <Color>[
+                    Color(0xFF0D47A1),
+                    Color(0xFF1976D2),
+                    Color(0xFF42A5F5),
+                  ],
+                ),
+              ),
+              padding: const EdgeInsets.all(10.0),
+              child:
+              const Text('Gradient Button', style: TextStyle(fontSize: 20)),
+            ),
+          ),
         ]),
-      ),
+      )
     );
   }
-
 
   void onTabTapped(int index) {
     setState(() {
