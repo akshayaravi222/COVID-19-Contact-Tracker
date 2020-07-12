@@ -13,17 +13,18 @@ class CovidForm extends StatefulWidget {
 }
 
 class _CovidState extends State<CovidForm> {
-  final List<Widget> _children = [
+  //int _currentIndex = 1;
+  /*final List<Widget> _children = [
     Notif(),
     Numbers(),
     Contact()
-  ];
+  ];*/
 
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+    return Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           new Flexible(
             child: new TextField(
@@ -52,40 +53,8 @@ class _CovidState extends State<CovidForm> {
                 )
             ),
           ),
-          ]
+        ]
     );
-//    return Row(
-//        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-//        children: <Widget>[
-//          new Flexible(
-//            child: new TextField(
-//                obscureText: false,
-//                decoration: InputDecoration(
-//                  border: OutlineInputBorder(),
-//                  labelText: 'Email',
-//                )
-//            ),
-//          ),
-//          new Flexible(
-//            child: new TextField(
-//                obscureText: false,
-//                decoration: InputDecoration(
-//                  border: OutlineInputBorder(),
-//                  labelText: 'Location',
-//                )
-//            ),
-//          ),
-//          new Flexible(
-//            child: new TextField(
-//                obscureText: false,
-//                decoration: InputDecoration(
-//                  border: OutlineInputBorder(),
-//                  labelText: 'Do you have the virus?',
-//                )
-//            ),
-//          ),
-//        ]
-//    );
   }
 
 
