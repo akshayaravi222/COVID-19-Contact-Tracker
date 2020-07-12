@@ -1,4 +1,6 @@
+import 'package:covid19_contact_tracker/contact_widget.dart';
 import 'package:flutter/material.dart';
+import 'placeholder_widget.dart';
 import 'package:http/http.dart' as http;
 
 class Home extends StatefulWidget {
@@ -9,6 +11,11 @@ class Home extends StatefulWidget {
 }
 class _HomeState extends State<Home> {
   int _currentIndex = 1;
+  final List<Widget> _children = [
+    PlaceholderWidget(Colors.yellow),
+    PlaceholderWidget(Colors.black),
+    Contact()
+  ];
   String dropdownValue = 'Massachusetts';
 
   @override
@@ -36,6 +43,7 @@ class _HomeState extends State<Home> {
       // Body content
       body: Center(
         child: Column(children: <Widget>[
+          _children[_currentIndex],
           Text(
             'COVID-19 Globally',
             style: TextStyle(fontSize: 50),
