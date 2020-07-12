@@ -11,6 +11,7 @@ class Home extends StatefulWidget {
     return _HomeState();
   }
 }
+
 class _HomeState extends State<Home> {
   int _currentIndex = 1;
   final List<Widget> _children = [
@@ -23,33 +24,31 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('COVID-19 Contact Tracer'),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        onTap: onTabTapped,
-        currentIndex: _currentIndex,
-        items: [
-          BottomNavigationBarItem(
-            icon: new Icon(Icons.notifications),
-            title: new Text('Notifications'),
-          ),
-          BottomNavigationBarItem(
-            icon: new Icon(Icons.home),
-            title: new Text('Home'),
-          ),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.person), title: Text('Contacts')
-          )
-        ],
-      ),
-      // Body content
-      body: Center(
-        child: Column(children: <Widget>[
-          _children[_currentIndex],
-        ]),
-      )
-    );
+        appBar: AppBar(
+          title: Text('COVID-19 Contact Tracer'),
+        ),
+        bottomNavigationBar: BottomNavigationBar(
+          onTap: onTabTapped,
+          currentIndex: _currentIndex,
+          items: [
+            BottomNavigationBarItem(
+              icon: new Icon(Icons.notifications),
+              title: new Text('Notifications'),
+            ),
+            BottomNavigationBarItem(
+              icon: new Icon(Icons.home),
+              title: new Text('Home'),
+            ),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.person), title: Text('Contacts'))
+          ],
+        ),
+        // Body content
+        body: Center(
+          child: Column(children: <Widget>[
+            _children[_currentIndex],
+          ]),
+        ));
   }
 
   void onTabTapped(int index) {
