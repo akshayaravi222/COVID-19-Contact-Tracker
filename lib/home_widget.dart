@@ -1,6 +1,7 @@
 import 'package:covid19_contact_tracker/contact_widget.dart';
 import 'package:covid19_contact_tracker/notif_widget.dart';
 import 'package:covid19_contact_tracker/numbers_widget.dart';
+import 'package:covid19_contact_tracker/covid_form.dart';
 import 'package:flutter/material.dart';
 import 'placeholder_widget.dart';
 import 'package:http/http.dart' as http;
@@ -17,6 +18,7 @@ class _HomeState extends State<Home> {
   final List<Widget> _children = [
     Notif(),
     Numbers(),
+    CovidForm(),
     Contact()
   ];
   String dropdownValue = 'Massachusetts';
@@ -28,6 +30,7 @@ class _HomeState extends State<Home> {
           title: Text('COVID-19 Contact Tracer'),
         ),
         bottomNavigationBar: BottomNavigationBar(
+          type: BottomNavigationBarType.fixed,
           onTap: onTabTapped,
           currentIndex: _currentIndex,
           items: [
@@ -38,6 +41,10 @@ class _HomeState extends State<Home> {
             BottomNavigationBarItem(
               icon: new Icon(Icons.home),
               title: new Text('Home'),
+            ),
+            BottomNavigationBarItem(
+              icon: new Icon(Icons.access_alarms),
+              title: new Text('Updates'),
             ),
             BottomNavigationBarItem(
                 icon: Icon(Icons.person), title: Text('Contacts'))
