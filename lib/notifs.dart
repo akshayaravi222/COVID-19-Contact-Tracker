@@ -9,7 +9,6 @@ class Home extends StatefulWidget {
 }
 class _HomeState extends State<Home> {
   int _currentIndex = 1;
-  String dropdownValue = 'Massachusetts';
 
   @override
   Widget build(BuildContext context) {
@@ -39,6 +38,14 @@ class _HomeState extends State<Home> {
             Text(
               'Notification',
               style: TextStyle(fontSize: 50)
+            ),
+            Text(
+                'Michelle: Sick on Tuesday',
+                style: TextStyle(fontSize: 30)
+            ),
+            Text(
+                'Message: Hi everyone! Sorry, but I got tested on Tuesday and have COVID.',
+                style: TextStyle(fontSize: 20)
             )
 
           ])
