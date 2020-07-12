@@ -1,5 +1,6 @@
 import 'package:covid19_contact_tracker/contact_widget.dart';
 import 'package:flutter/material.dart';
+import 'placeholder_widget.dart';
 import 'package:http/http.dart' as http;
 
 class Home extends StatefulWidget {
