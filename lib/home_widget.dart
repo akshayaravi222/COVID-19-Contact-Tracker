@@ -110,9 +110,6 @@ class _HomeState extends State<Home> {
             items: <String>[
               'Free',
               'Massachusetts',
-              'New York',
-              'Texas',
-              'Florida'
             ].map<DropdownMenuItem<String>>((String value) {
               return DropdownMenuItem<String>(
                 value: value,
@@ -143,7 +140,7 @@ class _HomeState extends State<Home> {
               ),
               padding: const EdgeInsets.all(10.0),
               child:
-              const Text('Gradient Button', style: TextStyle(fontSize: 20)),
+              const Text('Click here to your location-specific info', style: TextStyle(fontSize: 20)),
             ),
           ),
         ]),
