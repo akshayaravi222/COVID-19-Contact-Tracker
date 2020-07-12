@@ -29,6 +29,7 @@ class _HomeState extends State<Contact> {
         color: infectionRisk ? Colors.yellow : Colors.green,
       ),
       onTap: onTabTapped,
+
     );
   }
   bool onTabTapped() {
