@@ -16,11 +16,11 @@ class _HomeState extends State<Numbers> {
   Widget build(BuildContext context) {
     //return ListTile(
     return ListTile(
-      title: Text('COVID Numbers Globally', style: TextStyle(fontSize: 35)),
+      title: Text('COVID-19 Numbers Globally', style: TextStyle(fontSize: 35)),
       subtitle: Text(
-        'TotalCases: 12,898,827                                '
+        'Total Cases: 12,898,827                                '
         'Total Deaths: 568,815                                 '
-        'Total cases: 7,517,940',
+        'Total Recovered: 7,517,940',
         style: TextStyle(fontSize: 20),
       ),
     );
