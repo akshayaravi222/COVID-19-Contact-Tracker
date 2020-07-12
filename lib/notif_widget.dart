@@ -1,14 +1,24 @@
+import 'package:covid19_contact_tracker/contact_widget.dart';
+import 'package:covid19_contact_tracker/notif_widget.dart';
+import 'package:covid19_contact_tracker/numbers_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
-class Home extends StatefulWidget {
+class Notif extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
     return _HomeState();
   }
 }
-class _HomeState extends State<Home> {
+class _HomeState extends State<Notif> {
   int _currentIndex = 1;
+  final List<Widget> _children = [
+    //PlaceholderWidget(Colors.yellow),
+    Notif(),
+    //PlaceholderWidget(Colors.black),
+    Numbers(),
+    Contact()
+  ];
 
   @override
   Widget build(BuildContext context) {

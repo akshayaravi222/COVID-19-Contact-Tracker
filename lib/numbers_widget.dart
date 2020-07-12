@@ -5,13 +5,13 @@ import 'package:flutter/material.dart';
 import 'placeholder_widget.dart';
 import 'package:http/http.dart' as http;
 
-class Home extends StatefulWidget {
+class Numbers extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return _HomeState();
+    return _Num();
   }
 }
-class _HomeState extends State<Home> {
+class _Num extends State<Numbers> {
   int _currentIndex = 1;
   final List<Widget> _children = [
     //PlaceholderWidget(Colors.yellow),
@@ -25,30 +25,30 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+        appBar: AppBar(
         title: Text('COVID Contact Tracer'),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        onTap: onTabTapped,
-        currentIndex: _currentIndex,
-        items: [
-          BottomNavigationBarItem(
-            icon: new Icon(Icons.notifications),
-            title: new Text('Notifications'),
-          ),
-          BottomNavigationBarItem(
-            icon: new Icon(Icons.home),
-            title: new Text('Home'),
-          ),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.person), title: Text('Contacts'))
-        ],
-      ),
-      // Body content
-      body: Center(
-        child: Column(children: <Widget>[
-          _children[_currentIndex],
-          /*Text(
+    ),
+    bottomNavigationBar: BottomNavigationBar(
+    onTap: onTabTapped,
+    currentIndex: _currentIndex,
+    items: [
+    BottomNavigationBarItem(
+    icon: new Icon(Icons.notifications),
+    title: new Text('Notifications'),
+    ),
+    BottomNavigationBarItem(
+    icon: new Icon(Icons.home),
+    title: new Text('Home'),
+    ),
+    BottomNavigationBarItem(
+    icon: Icon(Icons.person), title: Text('Contacts'))
+    ],
+    ),
+    // Body content
+    body: Center(
+    child: Column(children: <Widget>[
+    //_children[_currentIndex],
+    Text(
             'COVID-19 Globally',
             style: TextStyle(fontSize: 50),
           ),
@@ -154,9 +154,9 @@ class _HomeState extends State<Home> {
               child:
               const Text('Click here to your location-specific info', style: TextStyle(fontSize: 20)),
             ),
-          ),*/
+          ),
         ]),
-      )
+    )
     );
   }
 
