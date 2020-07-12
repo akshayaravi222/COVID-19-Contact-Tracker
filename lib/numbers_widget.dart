@@ -25,30 +25,31 @@ class _Num extends State<Numbers> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-        title: Text('COVID Contact Tracer'),
-    ),
-    bottomNavigationBar: BottomNavigationBar(
-    onTap: onTabTapped,
-    currentIndex: _currentIndex,
-    items: [
-    BottomNavigationBarItem(
-    icon: new Icon(Icons.notifications),
-    title: new Text('Notifications'),
-    ),
-    BottomNavigationBarItem(
-    icon: new Icon(Icons.home),
-    title: new Text('Home'),
-    ),
-    BottomNavigationBarItem(
-    icon: Icon(Icons.person), title: Text('Contacts'))
-    ],
-    ),
-    // Body content
-    body: Center(
-    child: Column(children: <Widget>[
-    //_children[_currentIndex],
-    Text(
+      appBar: AppBar(
+        title: Text('COVID-19 Contact Tracer'),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        onTap: onTabTapped,
+        currentIndex: _currentIndex,
+        items: [
+          BottomNavigationBarItem(
+            icon: new Icon(Icons.notifications),
+            title: new Text('Notifications'),
+          ),
+          BottomNavigationBarItem(
+            icon: new Icon(Icons.home),
+            title: new Text('Home'),
+            ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person), title: Text('Contacts')
+          )
+        ],
+      ),
+  // Body content
+      body: Center(
+        child: Column(children: <Widget>[
+          //_children[_currentIndex],
+          Text(
             'COVID-19 Globally',
             style: TextStyle(fontSize: 50),
           ),
@@ -156,7 +157,7 @@ class _Num extends State<Numbers> {
             ),
           ),
         ]),
-    )
+      )
     );
   }
 

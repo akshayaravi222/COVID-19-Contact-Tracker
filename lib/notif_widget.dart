@@ -23,43 +23,43 @@ class _HomeState extends State<Notif> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text('COVID Contact Tracer'),
-        ),
-        bottomNavigationBar: BottomNavigationBar(
-          onTap: onTabTapped,
-          currentIndex: _currentIndex,
-          items: [
-            BottomNavigationBarItem(
-              icon: new Icon(Icons.notifications),
-              title: new Text('Notifications'),
-            ),
-            BottomNavigationBarItem(
-              icon: new Icon(Icons.home),
-              title: new Text('Home'),
-            ),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.person), title: Text('Contacts'))
-          ],
-        ),
-        // Body content
-        body: Center(
-          child: Column(children: <Widget>[
-            Text(
-              'Notification',
-              style: TextStyle(fontSize: 50)
-            ),
-            Text(
-                'Michelle: Sick on Tuesday',
-                style: TextStyle(fontSize: 30)
-            ),
-            Text(
-                'Message: Hi everyone! Sorry, but I got tested on Tuesday and have COVID.',
-                style: TextStyle(fontSize: 20)
-            )
+      appBar: AppBar(
+        title: Text('COVID-19 Contact Tracer'),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        onTap: onTabTapped,
+        currentIndex: _currentIndex,
+        items: [
+          BottomNavigationBarItem(
+            icon: new Icon(Icons.notifications),
+            title: new Text('Notifications'),
+          ),
+          BottomNavigationBarItem(
+            icon: new Icon(Icons.home),
+            title: new Text('Home'),
+          ),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.person), title: Text('Contacts'))
+        ],
+      ),
+      // Body content
+      body: Center(
+        child: Column(children: <Widget>[
+          Text(
+            'Notification',
+            style: TextStyle(fontSize: 50)
+          ),
+          Text(
+              'Michelle: Sick on Tuesday',
+              style: TextStyle(fontSize: 30)
+          ),
+          Text(
+              'Message: Hi everyone! Sorry, but I got tested on Tuesday and have COVID.',
+              style: TextStyle(fontSize: 20)
+          )
 
-          ])
-        )
+        ])
+      )
     );
   }
 
