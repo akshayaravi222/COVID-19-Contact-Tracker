@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'placeholder_widget.dart';
 import 'package:http/http.dart' as http;
 
 class Home extends StatefulWidget {
@@ -18,7 +17,6 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         title: Text('COVID Contact Tracer'),
       ),
-      //body: _children[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         onTap: onTabTapped,
         currentIndex: _currentIndex,
